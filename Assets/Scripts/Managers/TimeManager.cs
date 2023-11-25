@@ -5,7 +5,7 @@ public class TimeManager : MonoBehaviour
 {
     [SerializeField] Slider slider;
     [SerializeField] float TimeMax;
-    [SerializeField] float ActualTime;
+    public float ActualTime;
 
     void Start()
     {
