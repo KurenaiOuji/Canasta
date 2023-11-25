@@ -7,12 +7,15 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI m_HighScoreText;
     public int m_Score;
     public int m_HighScore;
+    public int _OldHighScore;
 
     void Start()
     {
+        //PlayerPrefs.SetInt("m_HighScore", 0);
         m_Score = 0000;
         m_HighScore = PlayerPrefs.GetInt("m_HighScore", 0);
         m_HighScoreText.text = "High Score: " + m_HighScore.ToString();
+        _OldHighScore = PlayerPrefs.GetInt("m_HighScore", 0);
     }
 
     void Update()
