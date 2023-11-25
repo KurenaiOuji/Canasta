@@ -2,42 +2,47 @@ using UnityEngine;
 
 public class Movimiento : MonoBehaviour
 {
-    public bool left = false;
-    public bool right = false;
+    public float Speed;
+    Rigidbody2D rb;
+    bool FacingRight = true;
+    Animator animator;
 
-    public Rigidbody2D rb;
-    public float speed;
-
-    public void Leftbt()
+    void Start()
     {
-        left = true;
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
-    public void Leftno() 
+    void Update()
     {
-        left = false;
+        Movement();
     }
 
-    public void Rightbt()
+    void Movement()
     {
-        right = true;
-    }
-
-    public void Rightno()
-    {
-        right = false;
-    }
-
-    private void Update()
-    {
-        if (left)
+        float inputMove = Input.GetAxis("Horizontal");
+        
+        if(inputMove != 0f)
         {
-            rb.AddForce(new Vector2(-speed,0));
+            animator.SetBool("Walk", true);
         }
 
-        if( right)
+        else
         {
-            rb.AddForce(new Vector2(speed,0));
+            animator.SetBool("Walk", false);
+        }
+
+        rb.velocity = new Vector2(inputMove * Speed, rb.velocity.y);
+        
+        Orientation(inputMove);
+    }
+
+    void Orientation(float inputMove)
+    {
+        if ((FacingRight == true && inputMove < 0) || (FacingRight == false && inputMove > 0))
+        {
+            FacingRight = !FacingRight;
+            transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
         }
     }
 }
