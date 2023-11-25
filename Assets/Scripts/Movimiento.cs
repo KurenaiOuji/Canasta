@@ -6,6 +6,8 @@ public class Movimiento : MonoBehaviour
     Rigidbody2D rb;
     bool FacingRight = true;
     Animator animator;
+    public Joystick Joystick;
+    float inputMove;
 
     void Start()
     {
@@ -20,7 +22,7 @@ public class Movimiento : MonoBehaviour
 
     void Movement()
     {
-        float inputMove = Input.GetAxis("Horizontal");
+        inputMove = Joystick.Horizontal;
         
         if(inputMove != 0f)
         {
