@@ -1,21 +1,22 @@
 {
   "project_info": {
-    "project_number": "284756103474",
-    "project_id": "senseshore-7b907",
-    "storage_bucket": "senseshore-7b907.appspot.com"
+    "project_number": "231955788965",
+    "firebase_url": "https://food-catch-frenzy-default-rtdb.firebaseio.com",
+    "project_id": "food-catch-frenzy",
+    "storage_bucket": "food-catch-frenzy.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:284756103474:android:d620a21770e737e54e872b",
+        "mobilesdk_app_id": "1:231955788965:android:15667765cb33e659df494c",
         "android_client_info": {
-          "package_name": "com.CopperTech.SenseShore"
+          "package_name": "com.CopperTech.FoodFrenzy"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCmu4DNDPnkfWrH8e3mzxlxJNwdbmQIosQ"
+          "current_key": "AIzaSyBoeW4oiW1InGEm98aKN6Zm9Z6mKJjd1NE"
         }
       ],
       "services": {

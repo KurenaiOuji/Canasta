@@ -9,6 +9,10 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/[Aa]ssets/[Ee]ditor [Dd]efault [Rr]esources
+/[Aa]ssets/[Ee]xternalDependencyManager
+/[Aa]ssets/[Ff]irebase
+/[Aa]ssets/[Ss]treamingAssets
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data

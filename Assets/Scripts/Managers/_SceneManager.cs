@@ -18,14 +18,9 @@ public class _SceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if((scoreManager._OldHighScore < scoreManager.m_Score) && (timeManager.ActualTime <= 0))
+        if(timeManager.ActualTime <= 0)
         {
             pauseManager.PauseUI = true;
-        }
-
-        else if (timeManager.ActualTime <= 0)
-        {
-            SceneManager.LoadScene(scene);
         }
     }
 
