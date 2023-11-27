@@ -22,7 +22,7 @@ public class Movimiento : MonoBehaviour
 
     void Movement()
     {
-        inputMove = Joystick.Horizontal;
+        inputMove = Input.GetAxis("Horizontal");
         
         if(inputMove != 0f)
         {
